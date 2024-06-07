@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Pizza Ordering Service</h1>
+    </header>
+
+    <main>
+        <form action="confirm_order.php" method="POST">
+            <!-- Contact Information -->
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+            </fieldset>
+
+            <!-- Pizza Details -->
+            <fieldset>
+                <legend>Pizza Details</legend>
+                <label for="quantity">Number of Pizzas:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required><br>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select><br>
+
+                <label for="shape">Shape:</label>
+                <input type="radio" id="round" name="shape" value="round" checked>
+                <label for="round">Round</label>
+                <input type="radio" id="square" name="shape" value="square">
+                <label for="square">Square</label><br>
+
+                <label for="toppings">Toppings:</label><br>
+                <input type="checkbox" id="pepperoni" name="toppings[]" value="Pepperoni">
+                <label for="pepperoni">Pepperoni</label><br>
+                <input type="checkbox" id="mushrooms" name="toppings[]" value="Mushrooms">
+                <label for="mushrooms">Mushrooms</label><br>
+                <input type="checkbox" id="olives" name="toppings[]" value="Olives">
+                <label for="olives">Olives</label><br>
+
+                <label for="crust">Crust Type:</label><br>
+                <input type="radio" id="deep_dish" name="crust" value="deep dish" checked>
+                <label for="deep_dish">Deep Dish</label><br>
+                <input type="radio" id="thin_crust" name="crust" value="thin crust">
+                <label for="thin_crust">Thin Crust</label><br>
+                <input type="radio" id="other_crust" name="crust" value="other">
+                <label for="other_crust">Other</label><br>
+            </fieldset>
+
+            <!-- Delivery Options -->
+            <fieldset>
+                <legend>Delivery Options</legend>
+                <label for="delivery">Delivery Method:</label><br>
+                <input type="radio" id="takeout" name="delivery" value="takeout" checked>
+                <label for="takeout">Takeout</label><br>
+                <input type="radio" id="delivery" name="delivery" value="delivery">
+                <label for="delivery">Delivery</label><br>
+                <input type="radio" id="eat_in" name="delivery" value="eat-in">
+                <label for="eat_in">Eat-in</label><br>
+
+                <label for="delivery_address">Delivery Address:</label><br>
+                <textarea id="delivery_address" name="delivery_address" rows="4" cols="50"></textarea><br>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Reset Form">
+        </form>
+    </main>
+
+    <footer>
+        <p>Thank you for choosing us for your pizza needs!</p>
+    </footer>
+
+    <!-- Pizza Image -->
+    <figure>
+        <img src="pizza.jpg" alt="Delicious Pizza">
+        <figcaption>A delicious pizza to accompany your order.</figcaption>
+    </figure>
+</body>
+</html>
